@@ -21,10 +21,10 @@ class CalcController {
     let buttons = document.querySelectorAll(
       "#buttons > getComputedStyle, #parts > g"
     );
-    buttons.forEach((button) => {
-      button.addEventListener("click", (e) => {
-        console.log(e);
-      });
+    buttons.forEach((btn, index) =>{
+      btn.addEventListener('click', e => {
+        console.log(btn.className.baseVal.replace("btn-",""));
+      })
     });
   }
   setDisplayDateTime() {
